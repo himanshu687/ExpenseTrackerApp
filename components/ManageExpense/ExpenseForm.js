@@ -41,7 +41,7 @@ const ExpenseForm = ({
     const expenseData = {
       amount: +inputs.amount.value,
       date: new Date(inputs.date.value),
-      description: inputs.description.value,
+      description: inputs.description.value.trim(),
     };
 
     const amountIsValid = !isNaN(expenseData.amount) && expenseData.amount > 0;
